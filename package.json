@@ -1,0 +1,112 @@
+{
+  "name": "@antv/dumi-theme-antv",
+  "version": "0.3.0-beta.1",
+  "description": "AntV theme based on dumi2.",
+  "types": "dist/types.d.ts",
+  "scripts": {
+    "dev": "father dev",
+    "build": "father build",
+    "lint": "npm run lint:es && npm run lint:css",
+    "lint:css": "stylelint \"{src,test}/**/*.{css,less}\"",
+    "lint:es": "eslint \"{src,test}/**/*.{js,jsx,ts,tsx}\"",
+    "prepublishOnly": "father doctor && npm run build"
+  },
+  "keywords": ["dumi", "dumi-theme", "antv"],
+  "authors": [],
+  "license": "MIT",
+  "files": [
+    "dist"
+  ],
+  "dependencies": {
+    "@ant-design/icons": "^4.7.0",
+    "@babel/standalone": "^7.19.5",
+    "@docsearch/css": "^3.3.0",
+    "@docsearch/react": "^3.3.0",
+    "@monaco-editor/react": "^4.4.6",
+    "@stackblitz/sdk": "^1.8.0",
+    "antd": "^4.23.5",
+    "classnames": "^2.3.2",
+    "codesandbox": "^2.2.3",
+    "docsearch.js": "^2.6.3",
+    "dumi": "^2.0.0-beta.11",
+    "front-matter": "^4.0.2",
+    "fs-extra": "^10.1.0",
+    "glob": "^8.0.3",
+    "indent-string": "^5.0.0",
+    "insert-css": "^2.0.0",
+    "lodash-es": "^4.17.21",
+    "monaco-editor": "^0.25.0",
+    "parse-github-url": "^1.0.2",
+    "rc-drawer": "^4.0.0",
+    "rc-footer": "^0.6.6",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-github-button": "^0.1.11",
+    "react-router-dom": "^6.4.2",
+    "react-slick": "^0.29.0",
+    "react-split-pane": "^0.1.92",
+    "react-use": "^17.4.0",
+    "reading-time": "^1.5.0",
+    "slick-carousel": "^1.8.1",
+    "uri-parse": "^1.0.0"
+  },
+  "commitlint": {
+    "extends": [
+      "@commitlint/config-conventional"
+    ]
+  },
+  "lint-staged": {
+    "*.{md,json}": [
+      "prettier --write --no-error-on-unmatched-pattern"
+    ],
+    "*.{css,less}": [
+      "stylelint --fix",
+      "prettier --write"
+    ],
+    "*.{js,jsx}": [
+      "eslint --fix",
+      "prettier --write"
+    ],
+    "*.{ts,tsx}": [
+      "eslint --fix",
+      "prettier --parser=typescript --write"
+    ]
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "peerDependencies": {
+    "dumi": "^2.0.0-beta.10",
+    "react": ">=16.9.0",
+    "react-dom": ">=16.9.0"
+  },
+  "devDependencies": {
+    "@commitlint/cli": "^17.1.2",
+    "@commitlint/config-conventional": "^17.1.0",
+    "@types/classnames": "^2.3.1",
+    "@types/fs-extra": "^9.0.13",
+    "@types/glob": "^8.0.0",
+    "@types/lodash-es": "^4.17.6",
+    "@types/node": "^18.11.3",
+    "@types/react": "^18.0.21",
+    "@types/react-router-dom": "^5.3.3",
+    "@types/react-slick": "^0.23.10",
+    "@umijs/lint": "^4.0.0",
+    "dumi": "^2.0.0-beta.10",
+    "eslint": "^8.23.0",
+    "father": "^4.1.0",
+    "father-plugin-dumi-theme": "^1.0.0-beta.0",
+    "husky": "^8.0.1",
+    "lint-staged": "^13.0.3",
+    "prettier": "^2.7.1",
+    "prettier-plugin-organize-imports": "^3.0.0",
+    "prettier-plugin-packagejson": "^2.2.18",
+    "react": "^18.0.0",
+    "react-dom": "^18.0.0",
+    "stylelint": "^14.9.1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/antvis/dumi-theme-antv"
+  }
+}

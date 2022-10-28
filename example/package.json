@@ -1,0 +1,16 @@
+{
+  "version": "0.3.0-beta.1",
+  "scripts": {
+    "start": "dumi dev",
+    "build": "dumi build",
+    "preview": "dumi preview"
+  },
+  "devDependencies": {
+    "dumi": "^2.0.0-beta.11",
+    "@antv/dumi-theme-antv": "file:../"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/antvis/dumi-theme-antv"
+  }
+}
