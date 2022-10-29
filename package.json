@@ -9,7 +9,8 @@
     "lint": "npm run lint:es && npm run lint:css",
     "lint:css": "stylelint \"{src,test}/**/*.{css,less}\"",
     "lint:es": "eslint \"{src,test}/**/*.{js,jsx,ts,tsx}\"",
-    "prepublishOnly": "father doctor && npm run build"
+    "prepare": "father link-dev-theme",
+    "prepublishOnly": "npm run build"
   },
   "keywords": ["dumi", "dumi-theme", "antv"],
   "authors": [],
@@ -95,7 +96,7 @@
     "dumi": "^2.0.0-beta.10",
     "eslint": "^8.23.0",
     "father": "^4.1.0",
-    "father-plugin-dumi-theme": "^1.0.0-beta.0",
+    "father-plugin-dumi-theme": "^1.0.0-beta.1",
     "husky": "^8.0.1",
     "lint-staged": "^13.0.3",
     "prettier": "^2.7.1",
